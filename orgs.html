@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>기관 정보</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="cover">
+    <img src="assets/images/reconnect cover.png" alt="커버 이미지">
+  </div>
+
+  <div class="container">
+    <div class="logo-wrap">
+    <a href="index.html">
+        <img src="assets/images/reconnect logo.png" alt="로고" class="logo" />
+    </a>
+    <h1 class="title">고립/은둔  청년 지원기관 안내</h1>
+
+    <div class="card">
+      <label class="label">검색 (기관명/장소/프로그램)</label>
+      <input id="search" class="input" type="text" placeholder="예: 청년센터, 서울, 상담..." />
+      <p id="status" class="small" style="margin-top:10px;">데이터 준비 중...</p>
+    </div>
+
+    <div class="card table-wrap">
+      <table class="table" id="orgTable">
+        <colgroup>
+          <col style="width: 80px" />
+          <col style="width: 180px" />
+          <col style="width: 180px" />
+          <col style="width: 220px" />
+          <col style="width: 180px" />
+          <col style="width: 80px" />
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>기관명</th>
+            <th>주소</th>
+            <th>소개</th>
+            <th>연락처</th>
+            <th>홈페이지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JSON 데이터로 자동 생성됩니다 -->
+        </tbody>
+      </table>
+
+      <p class="small">※ 표는 data/orgs.seoul.json 파일을 읽어서 자동으로 표시됩니다.</p>
+    </div>
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>프로그램 일정</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">지원 프로그램 일정</h1>
+
+  <div class="card">
+    <div class="cal-header">
+      <h2 class="cal-title" id="calTitle">프로그램 일정</h2>
+
+      <div class="cal-controls">
+        <button class="btn" id="prevMonth" type="button">←</button>
+        <button class="btn" id="todayBtn" type="button">오늘</button>
+        <button class="btn" id="nextMonth" type="button">→</button>
+      </div>
+    </div>
+
+    <div class="calendar" id="calendar"></div>
+
+    <div class="card" style="margin-top:12px;">
+      <h3 style="margin:0 0 8px;">선택한 날짜의 프로그램</h3>
+      <div id="dayList" class="small">날짜를 클릭하면 프로그램이 표시됩니다.</div>
+    </div>
+      
+    <div class="cal-filters">
+      <div>
+        <label class="label" for="orgFilter">기관</label>
+        <select id="orgFilter" class="input">
+          <option value="">전체</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="label" for="districtFilter">자치구</label>
+        <select id="districtFilter" class="input">
+          <option value="">전체</option>
+        </select>
+      </div>
+    </div>
+
+    <p class="small">※ 일정 데이터는 <code>data/programs.seoul.json</code>에서 불러옵니다.</p>
+  </div>
+
+
+    <a class="btn" href="hub.html">← 메뉴로</a>
+  </div>
+
+  <script src="assets/js/orgs.js"></script>
+  <script src="assets/js/calendar.js"></script>
+</body>
+</html>
