@@ -1,0 +1,67 @@
+[
+  {
+    "type": "링크",
+    "name": "서울청년센터",
+    "district": "서울",
+    "tags": ["상담", "청년", "정책"],
+    "phone": "02-731-2120",
+    "website": "https://youth.seoul.go.kr/orang/index.do"
+  },
+  {
+    "type": "링크",
+    "name": "청년ON",
+    "district": ["인천", "울산", "충북", "전북"],
+    "tags": ["상담", "청년", "프로그램", "자가진단"],
+    "phone": ["(인천) 032-8747700", " (울산) 052-242-1700", " (충북) 1551-1259", " (전북) 063-901-1339"],
+    "website": "http://www.mohw2030.co.kr/panel.asp"
+  },
+  {
+    "type": "링크",
+    "name": "두더지땅굴",
+    "district": "",
+    "tags": ["자가진단", "프로그램", "청년", "모임"],
+    "phone": "02-355-7910",
+    "website": "https://dudug.kr/"
+  },
+  {
+    "type": "기관",
+    "name": "안무서운 회사",
+    "district": "서울시 강북구 삼양로47길 5 사회적경제지원센터 203호",
+    "tags": ["프로그램", "청년", "모임", "쉐어하우스"],
+    "phone": "0507-1426-1195",
+    "website": "https://notscary.co.kr/index"
+  },
+  {
+    "type": "기관",
+    "name": "서울청년기지개센터",
+    "district": "서울시 종로구 이화장길 70-15",
+    "tags": ["프로그램", "청년", "모임", "공간"],
+    "phone": "02-6953-2520",
+    "website": "https://siryc.or.kr/"
+  },
+  {
+    "type": "기관",
+    "name": "푸른고래 리커버리 센터",
+    "district": "서울시 성북구 보문로72 성현빌딩 2F",
+    "tags": ["프로그램", "청년", "모임", "부모교육"],
+    "phone": "02-6494-2030",
+    "website": "https://the-recoverycenter.org/"
+  },
+  {
+    "type": "기관",
+    "name": "서울두더집",
+    "district": "서울시 은평구 불광로 89-4",
+    "tags": ["프로그램", "청년", "모임", "상담", "공간"],
+    "phone": "02-356-7941",
+    "website": "https://dudug.kr/93"
+  },
+  {
+    "type": "기관",
+    "name": "서울청년센터 관악오랑",
+    "district": "서울시 관악구 신림로 91 302호",
+    "tags": ["정책", "청년", "상담", "공간"],
+    "phone": "02-878-0823",
+    "website": "https://blog.naver.com/sillim3room"
+  }
+
+]

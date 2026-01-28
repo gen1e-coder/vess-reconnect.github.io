@@ -1,0 +1,328 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", Arial, sans-serif;
+  background: #ffefc1;
+  color: #111;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 28px auto;
+  padding: 0 16px;
+}
+
+.title {
+  margin: 0 0 10px;
+  font-size: 28px;
+}
+
+.lead {
+  margin: 0 0 16px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 14px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.link-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.link-card:hover {
+  border-color: #cfcfcf;
+  transform: translateY(-2px);
+  transition: 0.15s;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+  text-decoration: none;
+  color: #111;
+}
+
+.btn.primary {
+  background: #075000e2;
+  color: #fff;
+  border-color: #075000e2;
+}
+
+.label { display: block; margin-bottom: 8px; font-weight: 600; }
+.input {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table th, .table td {
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  padding: 10px 8px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+
+.small { font-size: 13px; opacity: 0.7; }
+
+/* 커버 이미지 */
+.cover img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 로고 */
+.logo-wrap {
+    margin-top:10px;
+    margin-bottom:8px;
+}
+.logo {
+  width: 80px;
+  display: block;
+}
+
+/* 구분 아이콘 */
+.type-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.table td:first-child {
+  text-align: center;
+}
+
+/* YouTube video */
+.video-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  border: none;
+}
+
+/* App-like calendar look */
+.cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cal-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.cal-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.cal-controls .btn {
+  padding: 10px 12px;
+  border-radius: 12px;
+}
+
+.cal-filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.calendar {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.cal-weekday {
+  font-weight: 700;
+  font-size: 12px;
+  opacity: 0.7;
+  padding: 6px 4px;
+}
+
+.cal-cell {
+  border: 1px solid #e8e8e8;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  padding: 12px;
+  text-align: left;
+  min-height: 86px;
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.12s, border-color 0.12s;
+}
+
+.cal-cell:hover {
+  transform: translateY(-1px);
+  border-color: #cfcfcf;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.cal-cell.muted {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.cal-daynum {
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.cal-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid #eee;
+  background: #fff;
+  opacity: 0.9;
+}
+
+.cal-cell.today {
+  outline: 2px solid #078b03;
+  outline-offset: 2px;
+}
+
+.cal-cell.selected {
+  border-color: #fada3b;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+}
+
+.day-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.day-item:last-child {
+  border-bottom: none;
+}
+
+.pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border: 1px solid #e08619;
+  border-radius: 999px;
+  margin-right: 6px;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.day-meta {
+  margin-top: 4px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.day-info-list {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.day-info-list li {
+  margin-bottom: 4px;
+}
+
+.day-title-text {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+/* 참여 링크 버튼 */
+.day-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.12s, box-shadow 0.12s, opacity 0.12s;
+}
+
+/* Disabled 참여 링크 버튼 */
+.day-link-btn.disabled {
+  background: #e0e0e0;
+  border-color: #ccc;
+  color: #777;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.8;
+}
+
+.day-link-btn.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+
+.day-link-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  opacity: 0.95;
+}
+
+.day-link-btn:active {
+  transform: translateY(0);
+}
+
+.link-icon {
+  font-size: 16px;
+  line-height: 1;
+}
