@@ -17,6 +17,12 @@ body {
   font-size: 28px;
 }
 
+.green-arrow {
+  color: #3B5B45; /* dark muted green */
+  font-size: 1.2em; /* optional */
+}
+
+
 .lead {
   margin: 0 0 16px;
   font-size: 18px;
