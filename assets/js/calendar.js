@@ -64,6 +64,39 @@ function expandPrograms(list) {
       continue;
     }
 
+    // weekly recurrence
+    if (p.repeat?.type === "weekly") {
+          const weekday = Number(p.repeat.weekday); // ✅ allow "5" or 5
+          if (!Number.isInteger(weekday) || weekday < 0 || weekday > 6) continue;
+
+          // 3A) WITH start/end
+          if (p.repeat.start && p.repeat.end) {
+            const start = parseYmd(p.repeat.start);
+            const end = parseYmd(p.repeat.end);
+            if (isNaN(start) || isNaN(end) || start > end) continue;
+
+            const curD = new Date(start);
+            while (curD <= end) {
+              if (curD.getDay() === weekday) out.push({ ...p, date: formatYmd(curD) });
+              curD.setDate(curD.getDate() + 1);
+            }
+            continue;
+          }
+
+          // 3B) WITHOUT start/end → generate ONLY for the currently viewed month
+          const year = current.getFullYear();
+          const month = current.getMonth();
+          const first = new Date(year, month, 1);
+          const last = new Date(year, month + 1, 0);
+
+          const curD = new Date(first);
+          while (curD <= last) {
+            if (curD.getDay() === weekday) out.push({ ...p, date: formatYmd(curD) });
+            curD.setDate(curD.getDate() + 1);
+          }
+          continue;
+        }
+
     // Optional: if you STILL have "date": "YYYY-MM-DD ~ YYYY-MM-DD"
     if (typeof p.date === "string" && p.date.includes("~")) {
       const parts = p.date.split("~").map(x => x.trim());
@@ -263,7 +296,7 @@ function renderDayList(dateStr, byDate) {
 }
 
 function renderCalendar() {
-  const filtered = getFilteredPrograms();
+  const filtered = expandPrograms(getFilteredPrograms());
   const byDate = groupProgramsByDate(filtered);
 
   // month range
@@ -364,7 +397,7 @@ async function loadPrograms() {
     const res = await fetch(PROGRAMS_URL);
     if (!res.ok) throw new Error("Failed to load programs JSON");
     const data = await res.json();
-    programs = Array.isArray(data) ? expandPrograms(data) : [];
+    programs = Array.isArray(data) ? data : [];
     // dropdown options (from program data)
     populateSelect(orgFilterEl, uniqueSorted(programs.map(p => p.org)), "전체");
     populateSelect(districtFilterEl, uniqueSorted(programs.map(p => p.district)), "전체");

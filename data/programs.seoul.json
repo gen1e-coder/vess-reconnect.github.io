@@ -30,5 +30,45 @@
       "세부내용 확인: https://dudug.kr/notice/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=169700138&t=board"
     ],
     "link": "https://forms.gle/zGYbbxGN51qsCtru7 "
+  },
+
+  {
+    "id": "3",
+    "title": "온라인 자조모임 <온더방>",
+    "org": "서울두더집",
+    "repeat": {
+      "type": "weekly",
+      "weekday": 6
+    },
+    "time": "16:00~18:00",
+    "district": "",
+    "address": "",
+    "info": [
+      "멀리 있어도 같이 이야기 나눌 수 있는 온더 그라운드 온라인 대화방",
+      "참여 신청은 필요 없고, 자유럽게 들어와 대화를 나눌 수 있는 공간",
+      "ZOOM 링크 - 회의ID: 865 5192 3568 / 안호: 2897561 / https://us06web.zoom.us/j/86551923568?pwd=VnlDd3hCNEN1RVdPM3orMlg5VHRmQT09"
+    ],
+    "link": "https://us06web.zoom.us/j/86551923568?pwd=VnlDd3hCNEN1RVdPM3orMlg5VHRmQT09"
+  },
+
+  {
+    "id": "4",
+    "title": "리커버리 야구단",
+    "org": "푸른고래 리커버리센터",
+    "repeat": {
+      "type": "weekly",
+      "weekday": 5
+    },
+    "time": "10:00~13:00",
+    "district": "남양주시",
+    "address": "경기도 남양주시 일패동 805-1",
+    "info": [
+      "정기 야구 훈련과 전문가 코칭 레슨 제공",
+      "정기 야구 훈련: 매월 1-3주째 금요일",
+      "전문가 코칭 레슨: 매월 4주째 금요일",
+      "리커버리센터 크루로 참여 시 신청 가능",
+      "황승정 코치 (02-6494-2031)로 문의"
+    ],
+    "link": ""
   }
 ]
